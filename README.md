@@ -1,4 +1,4 @@
-# Install Openstack(ussuri) (Before execute this shell, make sure Reinstall Ubuntu 18.04 on your computer)
+# Install Openstack(victoria) (Before execute this shell, make sure Reinstall Ubuntu 18.04 on your computer)
 It should be connected by two LAN lines.
 
 $ifconfig
