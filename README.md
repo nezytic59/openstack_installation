@@ -1,5 +1,5 @@
 # Install Openstack(victoria) (Before execute this shell, make sure Reinstall Ubuntu 18.04 on your computer)
-It should be connected by two LAN lines.
+It should be connected by 2 LAN lines.
 
 $ifconfig
 
