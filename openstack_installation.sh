@@ -15,8 +15,8 @@ if (( $EUID != 0 )); then
 fi
 
 ### Translate sources
-sed -i 's/kr.archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list
-sed -i 's/security.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list
+sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
+sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### Update and Upgrade
 apt update && apt dist-upgrade -y
