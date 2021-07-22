@@ -35,9 +35,9 @@ fi
 
 while :
 do	
-	echo -n '\nEnter Your Openstack PASSWD: '
+	echo -e '\nEnter Your Openstack PASSWD: '
 	read -s PASSWD
-	echo -n 'Check Your Openstack PASSWD: '
+	echo -e 'Check Your Openstack PASSWD: '
 	read -s CHECK_PASSWD
 
 	if [ $PASSWD == $CHECK_PASSWD ]; then
