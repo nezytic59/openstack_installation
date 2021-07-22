@@ -136,7 +136,7 @@ ${OPENSTACK_PATH} image create --disk-format raw --file /root/ubuntu_18.04.img -
 
 echo "********************OPENSTACK INSTALLATION AND BASIC SETTING IS FINISHED !!!!********************"
 
-### Create VM Instance
+'''### Create VM Instance
 
 echo -n "How many VM Instance? : "
 read NUM
@@ -166,3 +166,4 @@ read NAME
 
 IMAGE_NAME="ubuntu_18.04"
 ${OPENSTACK_PATH} server create --flavor m1.${SIZE} --image ${IMAGE_NAME} --max ${NUM} ${NAME}
+'''
