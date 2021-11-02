@@ -6,7 +6,7 @@ $ ifconfig
 ```
 
 ```
-$ chmod 700 openstack.sh
+$ chmod 700 openstack_install.sh
 ```
 
 After checking the interface, copy the INTERFACE_ID that inet is not set (ex. eno2 or enx~~)
