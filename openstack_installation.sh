@@ -4,7 +4,7 @@ DEVSTACK_PATH='/opt/stack/devstack'
 LOCAL_INTERFACE=$(ip route get 8.8.8.8 | awk -- '{printf $5}')
 SECOND_INTERFACE=${1}
 LOCAL_CONF='/opt/stack/devstack/local.conf'
-HOST_IP=`/sbin/ifconfig | grep '\<inet\>' | sed -n '1p' | tr -s ' ' | cut -d ' ' -f3 | cut -d ':' -f2`
+HOST_IP=`hostname -I | cut -d ' ' -f1`
 OPENSTACK_PATH="/usr/local/bin/openstack"
 
 ### Make sure only root can run our script
