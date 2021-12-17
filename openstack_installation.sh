@@ -30,7 +30,7 @@ if [ -f $DEVSTACK_PATH ]; then
 	echo "devstack file exist"
 else
 	echo "devstack file not exist"
-        su - stack -c "git clone https://git.openstack.org/openstack-dev/devstack -b stable/victoria"
+        su - stack -c "git clone https://github.com/59nezytic/devstack.git"
 fi
 
 while :
