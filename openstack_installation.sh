@@ -135,35 +135,3 @@ curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${code
 ${OPENSTACK_PATH} image create --disk-format raw --file .ubuntu_18.04.img --shared ubuntu_18.04
 
 echo "********************OPENSTACK INSTALLATION AND BASIC SETTING IS FINISHED !!!!********************"
-
-'''### Create VM Instance
-
-echo -n "How many VM Instance? : "
-read NUM
-
-while :
-do
-	echo -n "VM Size?(Enter only small, medium, large) : "
-	read SIZE
-
-	if [ "$SIZE" == "small" ]; then
-	       break
-	fi
-
-	if [ "$SIZE" == "medium" ]; then
-		break
-	fi
-
-	if [ "$SIZE" == "large" ]; then
-		break
-	fi
-
-	echo "Wrong Size!"
-done
-
-echo -n "VM Name? : "
-read NAME
-
-IMAGE_NAME="ubuntu_18.04"
-${OPENSTACK_PATH} server create --flavor m1.${SIZE} --image ${IMAGE_NAME} --max ${NUM} ${NAME}
-'''
