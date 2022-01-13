@@ -132,6 +132,6 @@ curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=${FILE_ID}"
 code="$(awk '/_warning_/ {print $NF}' /tmp/cookie)"
 curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${code}&id=${FILE_ID}" -o ${IMAGE}
 
-${OPENSTACK_PATH} image create --disk-format raw --file .ubuntu_18.04.img --shared ubuntu_18.04
+${OPENSTACK_PATH} image create --disk-format raw --file /root/openstack_installation/ubuntu_18.04.img --shared ubuntu_18.04
 
 echo "********************OPENSTACK INSTALLATION AND BASIC SETTING IS FINISHED !!!!********************"
