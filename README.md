@@ -1,4 +1,4 @@
-# Install Openstack(victoria) (Before execute this shell, make sure Clean Ubuntu 18.04 on your computer)
+# Install Openstack(victoria) (Before executing this shell, make sure cleaning Ubuntu 18.04 on your computer)
 It should be connected by 2 LAN lines.
 
 ```
