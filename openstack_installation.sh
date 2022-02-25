@@ -128,10 +128,8 @@ ${OPENSTACK_PATH} subnet create --project admin --network public --subnet-range 
 FILE_ID="1gWL91lkHUjH8Mm-mIRj-LPDk9joUDtKI"
 IMAGE="ubuntu_18.04.img"
 
-curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=${FILE_ID}" > /dev/null
-code="$(awk '/_warning_/ {print $NF}' /tmp/cookie)"
-curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${code}&id=${FILE_ID}" -o ${IMAGE}
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=${FILE_ID}' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=${FILE_ID}" -O ${IMAGE} && rm -rf /tmp/cookies.txt
 
-${OPENSTACK_PATH} image create --disk-format raw --file /root/openstack_installation/ubuntu_18.04.img --shared ubuntu_18.04
+${OPENSTACK_PATH} image create --disk-format raw --file /root/openstack_installation/${IMAGE} --shared ubuntu_18.04
 
 echo "********************OPENSTACK INSTALLATION AND BASIC SETTING IS FINISHED !!!!********************"
